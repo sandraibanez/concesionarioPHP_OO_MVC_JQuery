@@ -1,2 +1,2 @@
-model/*.ini
+**.ini
 # model/jwt.ini

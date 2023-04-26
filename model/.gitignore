@@ -1,2 +1,2 @@
-db.ini
-jwt.ini
+model/db.ini
+model/jwt.ini

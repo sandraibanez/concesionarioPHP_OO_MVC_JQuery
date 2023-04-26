@@ -1,6 +1,8 @@
 function loadCars(total_prod = 0, items_page = 3) {
     // localStorage.setItem('items_page', items_page);
     $('.date_car').empty();
+    localStorage.removeItem('redirect_cart');
+    localStorage.removeItem('redirect_cart2');
     $("#containerShop").empty();
     // $('.detalle_car').empty();
     var filter = JSON.parse(localStorage.getItem('filter', filter));
@@ -58,6 +60,14 @@ function clicks() {
         var id_car = this.getAttribute('id');
         click_like(id_car, "details");
     });
+    $(document).on("click", ".carrito", function () {
+        var id_car = this.getAttribute('id');
+        // $( '.date_img').empty();
+        localStorage.setItem('id_car',id_car);
+        console.log(id_car);
+        add_cart(id_car);
+    }
+    )
 }
 
 
@@ -125,10 +135,13 @@ function loadDetails(id_car) {
                     "<h3><b>" + "More Information:" + "</b></h3>" +
                     "<p>This vehicle has a 2-year warranty and reviews during the first 6 months from its acquisition.</p>" +
                     "<div class='buttons_details'>" +
-                    "<a class='button add' href='#'>Add to Cart</a>" +
-                    "<a class='button buy' href='#'>Buy</a>" +
+                    // "<a class='button add' href='#'>Add to Cart</a>" +
+                    // "<a class='button buy' href='#'>Buy</a>" +
+                    "<a class='carrito' id='" + data[0].id_car + "'><i id=" + data[0].id_car + " class='fa-solid fa-cart-shopping'></i></a>" +
                     "<span class='button' id='price_details'>" + data[0].price + "<i class='fa-solid fa-euro-sign'></i> </span>" +
                     "<a class='details__heart' id='" + data[0].id_car + "'><i id=" + data[0].id_car + " class='fa-solid fa-heart fa-lg'></i></a>" +
+                    
+                    //  "<a 'class='carrito' id='" + data[row].id_car +"><i id= " + data[row].id_car + " class='fa-solid fa-cart-shopping'></i></a>"  +
                     "</div>" +
                     "</div>" +
                     "</div>" +
@@ -238,8 +251,10 @@ function ajaxForSearch(url, filter, brand_filter, motor_filter, category_filter,
                             "<div class='product-info'>" +
                             "<div class='product-content'>" +
                             "<h1><b>" + data[row].id_brand + " " + data[row].name_model + "<a class='list__heart' id='" + data[row].id_car + "'><i id= " + data[row].id_car + " class='fa-solid fa-heart fa-lg'></i></a>" + "</b></h1>" +
+                            "<h1><b>" + "<a  id='" + data[row].id_car + "'class='carrito'><i id= " + data[row].id_car + " class='fa-solid fa-cart-shopping'></i></a>" + "</b></h1>" +
                             // <span>&#x2764;</span>
-                            // data-icon='&#x2764'
+                            // onclick='add_cart()'   <i class="fa-solid fa-cart-shopping"></i>
+                            // data-icon='&#x2764'  <i class="fa-duotone fa-cart-shopping"></i>
                             // <i id= " + data[row].id_car + " class='fa-solid fa-heart fa-lg'></i>
                             // "<h1><b>" + data[row].id_brand + " " + data[row].name_model + "<a class='list__heart' id='" + data[row].id_car + "'>❤<i id= " + data[row].id_car + " class='fa-solid fa-heart fa-lg'></i></a>" + "</b></h1>" +
                             "<p>Up-to-date maintenance and revisions</p>" +
@@ -931,4 +946,5 @@ $(document).ready(function () {
     clicks();
     remove_filter();
     pagination();
+   
 });

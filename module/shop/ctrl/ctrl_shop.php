@@ -323,7 +323,10 @@ switch ($_GET['op']) {
         }
             break;
 
-
+            case 'insert_cart'; 
+            echo json_encode('insert_cart_shop');
+            exit; 
+            break;
     default;
         // include("module/views/pages/error404.php");
         include ("view/inc/error404.php");

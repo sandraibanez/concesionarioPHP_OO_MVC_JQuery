@@ -50,10 +50,16 @@ function login() {
                     if (localStorage.getItem('redirect_like')) {
                         console.log('usuario1');
                         setTimeout(' window.location.href = "index.php?page=ctrl_shop&op=list"; ', 1000);
-                    } else {
+                    } else if (localStorage.getItem('redirect_cart')){
+                        console.log('cart');
+                        setTimeout(' window.location.href = "index.php?page=ctrl_shop&op=list"; ', 1000);
+                    }else{
                         console.log('usuario2');
-                        setTimeout(' window.location.href = "index.php?page=ctrl_home&op=list"; ', 1000);
+                        setTimeout(' window.location.href = "index.php?page=ctrl_shop&op=list"; ', 1000);
+
+                        // setTimeout(' window.location.href = "index.php?page=ctrl_home&op=list"; ', 1000);
                     }
+                    
                 }
             })
             .catch(function(textStatus) {

@@ -24,7 +24,7 @@
 		<link href="view/assets/css/style3.css" rel="stylesheet" type="text/css" />
 		<!-- <link href="view/assets/css/bootstrap.css" rel="bootstrapsheet" type="text/css" /> -->
 	    <script src="module/shop/model/ctrl_shop.js"></script> 
-					
+		<script src="module/cart/model/cart.js"></script> 
 		             <!-- module\cars\model\validate_cars.js -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

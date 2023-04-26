@@ -33,6 +33,9 @@
 		case "ctrl_login";
 			include("module/login/ctrl/ctrl_login.php");
 			break;
+		case "controller_cart";
+			include("module/cart/controller/controller_cart.php");
+			break;
 		default;
 			include("module/home/ctrl/ctrl_home.php");
 			break;

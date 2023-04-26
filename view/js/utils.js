@@ -34,11 +34,20 @@ function load_menu() {
                 }
                 $('.log_icon').empty();
                 $('#user_info').empty();
+                
                 // $('<img src="' + data.avatar + '"alt="Robot">').appendTo('.log-icon');
                 $('<img src="' + data.avatar + '" alt="Robot">').css({'width': '50px', 'height': '50px', 'border-radius':'25px'}).appendTo('.log_icon');
-
+// =================================================================================================
+                
+// =================================================================================================
                 $('<p></p>').attr({ 'id': 'user_info' }).appendTo('#des_inf_user')
                     .html(
+                       '<li>'+
+                       '<a href="index.php?page=controller_cart&op=view">'+
+                       '<i class="fa fa-shopping-cart">'+'</i>'+
+                       '<span class="nav-text">'+'cart'+'</span>'+
+                       '</a>'+
+                       '</li>'+
                         '<a id="logout"><i id="icon-logout" class="fa-solid fa-right-from-bracket"></i></a>' +
                         '<a>' + data.username + '<a/>'
 

@@ -33,6 +33,12 @@
                 <span class="nav-text">login</span>
                 </a>
                 </li>
+                <!-- <li>
+                <a href="index.php?page=controller_cart&op=view">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="nav-text">cart</span>
+                </a>
+                </li> -->
                 <li>
                 <a href="index.php?page=services">
                 <i class="fa fa-align-left fa-lg"></i>

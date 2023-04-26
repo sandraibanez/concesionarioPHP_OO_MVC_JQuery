@@ -7,6 +7,8 @@
 		include("view/inc/top_page_home.php");
 	} elseif ((isset($_GET['page'])) && ($_GET['page']==="ctrl_login") ){
 		include("view/inc/top_page_login.php");
+	}elseif ((isset($_GET['page'])) && ($_GET['page']==="controller_cart") ){
+		include("view/inc/top_page_cart.php");
 	}else{
 		include("view/inc/top_page.php");
 	}

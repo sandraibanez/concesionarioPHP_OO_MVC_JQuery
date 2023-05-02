@@ -46,8 +46,8 @@ class DAOCart{
         ON c.cod_cart=c1.cod_cart  and c.codigo_producto= c2.id_car and c2.model=m.id_model and m.id_brand=b.name_brand 
         WHERE c.codigo_producto AND c.user=(SELECT u.id_user FROM users u WHERE u.username= '$user' ) ";
         // $sql ="call user_cart ('select_user_cart','$user',@hist_carts2 )";
-        echo json_encode($sql);
-        exit;
+        // echo json_encode($sql);
+        // exit;
         $conexion = connect::con();
         $res = mysqli_query($conexion, $sql);
         connect::close($conexion);

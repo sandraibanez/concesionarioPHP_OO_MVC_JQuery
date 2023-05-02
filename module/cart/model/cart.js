@@ -58,7 +58,7 @@ function load_cart(){
             var total_price = 0;
             for (row in data) {
                 console.log(data);
-                console.log(data[row].qty_max);
+                console.log(data[row]);
                 $('<div></div>').appendTo('.cart__products')
                         .html(
                 // $(".cart__products").append(
@@ -100,6 +100,7 @@ function load_cart(){
             '<td class="remove">'+'<button class="button__remove" id="'+ data[row].codigo_producto +'">Remove</button>'+'</td>'+
                ' </tr></div></div></div>'+
              '  </table>'+
+
              '<button class="checkout-cta" id="'+ data[row].codigo_producto +'">checkout</button>'
                 )   
                 var total_price = total_price + (data[row].precio)*(data[row].qty);

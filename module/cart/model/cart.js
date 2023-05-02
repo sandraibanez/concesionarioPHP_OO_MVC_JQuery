@@ -95,12 +95,11 @@ function load_cart(){
             "</table>"+'</td>'+
 
             '<td class="price">' + data[row].price + "€"+'</td>'+
-            '<td class="amount">'+'<p>'+"cantidad"+'</p>'+'<input class="quantity-field" id="'+ data[row].codigo_producto +'" type="number" value="' + data[row].qty + '" min="1" max="' + data[row].qty_max + '">"' + data[row].qty_max + '"</td>'+
+            '<td class="amount">'+'<p>'+"cantidad"+'</p>'+'<input class="quantity-field" id="'+ data[row].codigo_producto +'" type="number" value="' + data[row].qty + '" min="1" max="' + data[row].qty_max + '"></td>'+
             '<td id="'+ data[row].codigo_producto +'" class="pricesubtotal">'+'<strong>precio total : ' + (data[row].price)*(data[row].qty) +  "€"+'</strong>'+'</td>'+
             '<td class="remove">'+'<button class="button__remove" id="'+ data[row].codigo_producto +'">Remove</button>'+'</td>'+
                ' </tr></div></div></div>'+
              '  </table>'+
-             '<p>'+ data[row].qty_max +'</p>'+
              '<button class="checkout-cta" id="'+ data[row].codigo_producto +'">checkout</button>'
                 )   
                 var total_price = total_price + (data[row].precio)*(data[row].qty);

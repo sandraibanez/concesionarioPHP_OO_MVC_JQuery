@@ -41,11 +41,11 @@ class DAOCart{
      }
 
     function select_user_cart($user){
-        $sql = "SELECT c1.user, c1.codigo_producto, c1.qty, c2.img_car, m.name_model, c2.price, b.name_brand,c2.gear_shift, c.qty_max
-        FROM  cart c INNER JOIN cart_hist c1 INNER JOIN car c2 INNER JOIN model m INNER JOIN brand b
-        ON c.cod_cart=c1.cod_cart  and c.codigo_producto= c2.id_car and c2.model=m.id_model and m.id_brand=b.name_brand 
-        WHERE c.codigo_producto AND c.user=(SELECT u.id_user FROM users u WHERE u.username= '$user' ) ";
-        // $sql ="call user_cart ('select_user_cart','$user',@hist_carts2 )";
+        // $sql = "SELECT c1.user, c1.codigo_producto, c1.qty, c2.img_car, m.name_model, c2.price, b.name_brand,c2.gear_shift, c.qty_max
+        // FROM  cart c INNER JOIN cart_hist c1 INNER JOIN car c2 INNER JOIN model m INNER JOIN brand b
+        // ON c.cod_cart=c1.cod_cart  and c.codigo_producto= c2.id_car and c2.model=m.id_model and m.id_brand=b.name_brand 
+        // WHERE c.codigo_producto AND c.user=(SELECT u.id_user FROM users u WHERE u.username= '$user' ) ";
+        $sql ="call user_cart ('select_user_cart','$user',@hist_carts2 )";
         // echo json_encode($sql);
         // exit;
         $conexion = connect::con();

@@ -21,6 +21,7 @@
 	    <link href="view/assets/css/style.css" rel="stylesheet" type="text/css" />
 		<link href="view/assets/css/style4.css" rel="stylesheet" type="text/css" />
 		<link href="view/assets/css/cart.css" rel="stylesheet" type="text/css"/>
+		<link href="view/assets/css/loadcart.css" rel="stylesheet" type="text/css"/>
 		<link href="view/assets/css/bootstrap.css" rel="bootstrapsheet" type="text/css" />
 	    <script src="module/cars/model/validate_cars.js"></script> 
 		<script src="module/cart/model/cart.js"></script> 

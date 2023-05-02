@@ -104,7 +104,7 @@
             //     exit; 
             $id_car = $_POST['codigo_producto']; 
             $qty = $_POST['qty'] ;
-            //  echo json_encode($qty);
+            //  echo json_encode($id_car);
             //     exit; 
                 try{
                     $json = decode_token($_POST['token']); 
